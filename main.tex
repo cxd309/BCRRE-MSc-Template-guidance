@@ -1,0 +1,147 @@
+%% preamble
+
+% document template
+\documentclass{bcrre_assignment}
+
+% Document metadata
+% fill these in to update header, footer and titlepage
+\def\modulename{Module Name}
+\def\assignmenttitle{Assignment Title}
+\def\studentidnumber{Student ID Number}
+\def\datesubmitted{Date Submitted}
+
+% references
+\addbibresource{references.bib}
+
+%% document
+\begin{document}
+\pagenumbering{gobble}
+
+\maketitle
+
+\justifying %all text after title page is fully justified
+
+\chapter*{Executive summary}
+This is probably the most important part of an assignment as it is the first impression that you will make on the person that is reading or marking your work.  The Executive Summary is a brief, comprehensive summary of the content of the assignment, and it needs to be dense with information.  Suggested areas to be covered include:
+
+\begin{itemize}
+    \item A very brief summary of the task or brief that has been set (a sentence or two only); 
+    \item A brief description of how you went about finding the answer;
+    \item A summary of the work or analysis undertaken, and the outcome or results of this analysis; 
+    \item The main findings and recommendations.
+\end{itemize}
+
+This section is targeted at a busy senior manager, and it therefore needs to include the key information that would allow him or her to take meaningful decisions.  It is also important that you clearly state your own views here if it is appropriate to do so, and that you make clear and helpful recommendations based on the work that you have done. 
+
+It is not normal to include references in an Executive Summary, and graphics or tables should be used sparingly.  It should be between one to two pages in length.
+
+\newpage
+
+\tableofcontents
+% stop all the tables / lists in this section being on seperate pages
+\begingroup \let\clearpage\relax 
+\listoffigures
+\listoftables
+% manual glossary, an enthusiastic student could use a table or explore the {glossaries} package
+\chapter*{Glossary / list of abbreviations}
+The Glossary is essential to explain any specialist terminology or abbreviations you have used in your assignment.  For specialist terminology, provide a brief one-sentence explanation of what the term means. For abbreviations (including acronyms), just provide the full version of what the abbreviation stands for.  The list should be sorted alphabetically.
+
+\begin{table}[h]
+\centering
+\caption{Glossary / List of Abbreviations}
+\label{tab:my-table}
+\begin{tabular}{@{}ll@{}}
+\toprule
+Term & Explanation / Meaning / Definition \\ \midrule
+GB & Great Britain (England, Scotland and Wales) \\
+NR & Network Rail \\
+TLA & Three Letter Acronym \\
+UK & United Kingdom (Great Britain and Northern Ireland) \\ \bottomrule
+\end{tabular}
+\end{table}
+
+NOTE: At the first usages of an abbreviation in the document the full meaning should follow in brackets.
+
+NOTE: There are \LaTeX packages to manage this automatically (glossaries is an example) and online resources to help with table creation. This table was made using \url{https://www.tablesgenerator.com}
+
+\endgroup
+
+%file with a chapter on how to best use this template, can be removed one you start using this template
+\input{guidance-example-section/how-to-get-the-most.tex}
+
+%start page numbering at the first chapter
+\chapter{Introduction} \pagenumbering{arabic}
+
+This will become Chapter 1 when you have deleted the instructions above.  While it is usual to start a fresh chapter in a dissertation on a new page, this is not usually necessary for assignments. To change this behaviour have a look at the titlesec commands in the template file (\verb|bcrre_assignment.cls|).
+
+It is usual to give a brief introduction to the subject area (just a few sentences) and a brief summary of what you have been asked to do (again just a few sentences).
+
+\section{Scope}
+Describe what is and more importantly what \textbf{is not} included (i.e. the limitations or boundaries of the work you have done).  While this section is not absolutely necessary for assignments, it is a good idea to practice this as you will definitely need to include such a section for your dissertation. 
+
+\section{Methodology}
+This section details how you tackled the assignment and the associated research. For example, how did you gather the data required, what analysis or simulation tools did you use?
+
+This section is not strictly necessary for assignments, but again it can be a good idea to practice including this section as you will definitely need it for your dissertation.
+
+\section{Assignment structure}
+While not strictly necessary for assignments, it can be helpful to include a brief description of how the document is structured, perhaps giving a sentence or two about each chapter of your work.  Phrase it in terms of the author / writer doing things, e.g. ‘In Chapter 4, the author describes ...’.  This is not needed for minor assignments. 
+
+\chapter{Background}
+You can assume that the reader is aware of general railway concepts, but you cannot assume for example, that the reader is familiar with a specific technology or the geography of a particular country (with the exception of the UK).  So this is where you describe the general knowledge that you have on the subject that the reader might not know.
+
+For example, this chapter could be used to introduce the history of a particular railway construction project, or perhaps to describe the current situation in the UK or elsewhere.  It can be particularly helpful to include maps if you are going to discuss foreign railways later on in the assignment. 
+
+While it is normal to include a background chapter in dissertations, it may or may not be necessary for an assignment, depending on the subject matter.  It is also quite common (and perfectly acceptable) to include a degree of background information as part of your introduction, particularly for shorter assignments.
+
+\chapter{Literature review}
+While it is normal to include a formal literature review for dissertations, this is usually not necessary for assignments unless the brief explicitly asks for one.  Indeed, for most assignments, it is acceptable to weave your research / reading into the main body of the document with appropriate citations and quotations.  But if you do decide to include a formal literature review, it needs to include the following elements:
+
+\begin{itemize}
+    \item What have people said about this topic?
+    \item Where do they agree?
+    \item Where do they differ?
+    \item Who is right in the view of the author of the assignment?
+    \item What lessons are appropriate for this assignment?
+\end{itemize}
+
+But regardless of the approach you take, \textbf{you must use the author-date (i.e. Harvard) method of referencing}.
+
+\chapter{Case studies}
+Some assignments can benefit from case studies where you want to give detailed examples of good or bad practice.  Case studies normally include the following elements:
+
+\begin{itemize}
+    \item Why is it relevant?
+    \item What happened in this case study?
+    \item What lessons are appropriate for this assignment?
+\end{itemize}
+
+However, there is no absolute requirement to have case studies in your assignment. 
+
+
+\chapter{Insert more of your own chapters here}
+Overall, an assignment should contain a limited number of chapters (somewhere between 5 and 9).  But make sure that the title you use for each chapter gives the reader a good idea of what it contains. 
+
+\chapter{Conclusions}
+
+Like the Executive Summary, the Conclusions section is another important part of any assignment, and you need to make sure it is to a high standard.  Here, you need to provide a brief summary of your work and link it to the problem under investigation, then examine, interpret, and qualify the results / findings and emphasize any theoretical or practical consequences of the results.  
+It is recommended that you divide your conclusions into two sections:
+\begin{itemize}
+    \item The first section titled “Findings” should be used to provide a factual summary of what you have found during your research;
+    \item The second section titled “Recommendations” should be more subjective and personal since you will be suggesting a way forward.
+\end{itemize}
+It is sometimes helpful to also include a review of the approach you have taken to the assignment to provide a critique of what you have done.  It can also be appropriate to discuss what areas or further work or research might be useful, or how the work / research you have done could be developed further.
+Bear in mind that the Conclusions section needs to be a strong section as it will be the final impression that you leave the reader with. 
+
+\section{Word count}
+If you are using overlead then in the top left menu there is a tool to show your current wordcount.
+
+
+\printbibliography
+
+%% Add Appendicies
+\appendix
+\chapter{Appendix title}
+Appendixes are optional, and are typically used to include detailed data used in the main body of the report.  Always include a sentence or two to introduce the table or other information that you are presenting in each and every appendix. 
+
+\end{document}
